@@ -1198,8 +1198,241 @@ Membership Enquiry
 DONATION
 ====================================================== -->
 
+<<!-- DONATION SECTION -->
+
 <section id="donate" class="donation-section">
 
+<div class="donation-container">
+
+<h2>Donate to IAESNAR ❤️</h2>
+
+<p>
+Your contribution helps support education, scientific awareness,
+nature protection and social responsibility.
+</p>
+
+<h3>Choose Donation Amount</h3>
+
+<div class="donation-buttons">
+
+<button onclick="selectDonation(100)">₹100</button>
+<button onclick="selectDonation(500)">₹500</button>
+<button onclick="selectDonation(1000)">₹1,000</button>
+<button onclick="selectDonation(2000)">₹2,000</button>
+<button onclick="showCustomAmount()">Custom</button>
+
+</div>
+
+<div id="customAmountBox" style="display:none;">
+
+<input
+type="number"
+id="customAmount"
+placeholder="Enter amount ₹"
+min="1">
+
+<button onclick="setCustomAmount()">
+Set Amount
+</button>
+
+</div>
+
+<div id="selectedDonation">
+Selected Donation: ₹100
+</div>
+
+<!-- QR CODE WILL BE ADDED HERE -->
+
+<div class="donation-qr">
+<span>DONATION QR<br>WILL BE ADDED</span>
+</div>
+
+<button
+class="donate-now"
+onclick="donateNow()">
+Donate Now ❤️
+</button>
+
+<p id="donationMessage"></p>
+
+</div>
+
+</section>
+
+
+<style>
+
+.donation-section{
+    padding:80px 20px;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(6,43,99,.95),
+        rgba(7,91,36,.95)
+    );
+}
+
+.donation-container{
+    max-width:850px;
+    margin:auto;
+    padding:40px 25px;
+    border-radius:25px;
+    background:rgba(255,255,255,.10);
+}
+
+.donation-container h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.donation-container h3{
+    margin-top:25px;
+}
+
+.donation-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:25px 0;
+}
+
+.donation-buttons button{
+    padding:13px 22px;
+    border:2px solid #D9A514;
+    border-radius:30px;
+    background:white;
+    color:#062B63;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.donation-buttons button:hover{
+    background:#D9A514;
+}
+
+#customAmountBox{
+    margin:20px 0;
+}
+
+#customAmount{
+    padding:13px;
+    width:230px;
+    border:2px solid #D9A514;
+    border-radius:10px;
+    font-size:16px;
+}
+
+#customAmountBox button{
+    padding:13px 18px;
+    margin-left:5px;
+    border:0;
+    border-radius:10px;
+    background:#D9A514;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#selectedDonation{
+    margin:20px;
+    color:#D9A514;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.donation-qr{
+    width:220px;
+    height:220px;
+    background:white;
+    color:#555;
+    margin:25px auto;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.donate-now{
+    padding:14px 30px;
+    border:0;
+    border-radius:30px;
+    background:#D9A514;
+    color:#172000;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#donationMessage{
+    margin-top:18px;
+    font-weight:bold;
+}
+
+</style>
+
+
+<script>
+
+let donationAmount = 100;
+
+function selectDonation(amount){
+
+    donationAmount = amount;
+
+    document.getElementById("selectedDonation").innerText =
+        "Selected Donation: ₹" +
+        amount.toLocaleString("en-IN");
+
+    document.getElementById("donationMessage").innerText = "";
+
+    document.getElementById("customAmountBox").style.display = "none";
+}
+
+function showCustomAmount(){
+
+    document.getElementById("customAmountBox").style.display = "block";
+
+    document.getElementById("customAmount").focus();
+}
+
+function setCustomAmount(){
+
+    let amount =
+        Number(document.getElementById("customAmount").value);
+
+    if(!amount || amount < 1){
+
+        document.getElementById("donationMessage").innerText =
+            "Please enter a valid amount.";
+
+        return;
+    }
+
+    donationAmount = amount;
+
+    document.getElementById("selectedDonation").innerText =
+        "Selected Donation: ₹" +
+        amount.toLocaleString("en-IN");
+
+    document.getElementById("donationMessage").innerText =
+        "Custom amount selected ❤️";
+}
+
+function donateNow(){
+
+    document.getElementById("donationMessage").innerText =
+        "Selected donation: ₹" +
+        donationAmount.toLocaleString("en-IN") +
+        ". Payment will be connected after adding the official QR/UPI details.";
+
+}
+
+</script>
+        
 <div class="container">
 
 <div class="donation-box">
