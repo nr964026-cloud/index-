@@ -3,117 +3,807 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAESNAR | Education • Science • Nature</title>
+
+<title>IAESNAR | Education • Science • Nature • Responsibility</title>
+
+<meta name="description"
+content="Indian Association of Education, Scientific, Nature Awareness and Responsibility.">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;color:#17251b;background:#f5f8f4;line-height:1.6}
-header{position:sticky;top:0;z-index:1000;background:#062b63;box-shadow:0 3px 15px #0003}
-.nav{max-width:1200px;margin:auto;min-height:72px;padding:8px 18px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:10px;color:white;font-weight:bold;font-size:12px}
-.logo{width:55px;height:55px;border-radius:50%;background:white;border:3px solid #d9a514;object-fit:contain}
-nav{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}
-nav a{color:white;text-decoration:none;padding:8px 11px;border-radius:20px;font-size:13px;font-weight:bold}
-nav a:hover{background:#d9a514;color:#172000}
 
-.hero{min-height:650px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:70px 20px;background:linear-gradient(135deg,#062b63,#075b24)}
-.hero-content{max-width:900px}
-.badge{display:inline-block;border:1px solid #d9a514;color:#d9a514;border-radius:30px;padding:7px 18px;margin-bottom:18px;font-weight:bold}
-.hero h1{font-size:clamp(35px,6vw,65px);line-height:1.1;margin-bottom:20px}
-.hero h1 span{color:#d9a514}
-.hero p{font-size:18px}
-.hero-buttons{margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.hero-buttons a{padding:13px 25px;border-radius:30px;text-decoration:none;font-weight:bold}
-.btn1{background:#d9a514;color:#172000}
-.btn2{border:2px solid white;color:white}
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-section{padding:75px 20px}
-.container{max-width:1150px;margin:auto}
-.title{text-align:center;margin-bottom:40px}
-.title h2{font-size:36px;color:#062b63}
-.line{width:65px;height:4px;background:#d9a514;margin:12px auto;border-radius:5px}
-.title p{color:#666}
-
-.about{background:white}
-.about-box{max-width:900px;margin:auto;padding:40px;text-align:center;border-left:6px solid #075b24;border-radius:20px;background:#f7faf7;box-shadow:0 8px 25px #0001}
-.about-box p{font-size:20px}
-
-.programs{background:#eef5f0}
-.areas{background:white}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:white;padding:27px;border-radius:20px;box-shadow:0 8px 25px #0001;border-top:4px solid #d9a514}
-.card h3{color:#062b63;margin:8px 0}
-.icon{font-size:35px}
-
-.philosophy{background:linear-gradient(135deg,#075b24,#062b63);color:white}
-.philosophy .title h2{color:white}
-.philosophy-box{max-width:850px;margin:auto;padding:40px;text-align:center;border:1px solid #ffffff44;border-radius:25px;background:#ffffff12}
-.philosophy-box p{font-size:21px}
-
-.gallery{background:#eef5f0}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.gallery-grid img{width:100%;height:210px;object-fit:cover;border-radius:16px;background:#ddd}
-.gallery-empty{text-align:center;grid-column:1/-1;padding:30px;color:#777}
-
-.events{background:#f5f8f4}
-.news{background:white}
-
-.donation{background:linear-gradient(135deg,#062b63,#075b24);text-align:center}
-.donation-box{max-width:720px;margin:auto;background:#fffffff7;border-radius:30px;padding:40px 22px;box-shadow:0 15px 50px #0004}
-.donation-box h2{font-size:36px;color:#062b63}
-.qr-box{width:260px;height:260px;margin:25px auto;padding:10px;background:white;border:3px solid #d9a514;border-radius:18px}
-.qr{width:100%;height:100%;object-fit:contain}
-.qr-missing{padding-top:85px;color:#777}
-.upi{padding:18px;background:#eef6f0;border-radius:15px;margin:20px auto}
-.upi strong{display:block;color:#062b63;font-size:19px;word-break:break-all}
-button{cursor:pointer}
-.copy{margin-top:10px;padding:9px 18px;border:0;border-radius:20px;background:#062b63;color:white;font-weight:bold}
-.amounts{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:15px}
-.amounts button{padding:12px 20px;border:2px solid #d9a514;border-radius:25px;background:white;color:#062b63;font-weight:bold}
-.amounts button:hover{background:#d9a514}
-.amount-input{display:flex;width:260px;margin:15px auto;border:2px solid #d9a514;border-radius:12px;overflow:hidden;background:white}
-.amount-input span{padding:11px;font-weight:bold;color:#062b63}
-.amount-input input{width:100%;padding:12px;border:0;outline:0;font-size:17px}
-.donate-btn{padding:15px 32px;border:0;border-radius:30px;background:#d9a514;color:#172000;font-size:18px;font-weight:bold}
-#status{margin-top:12px;color:#075b24;font-weight:bold}
-
-.contact{background:white}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contact-card{text-align:center;background:#eef5f0;padding:30px;border-radius:20px}
-.contact-card h3{color:#062b63}
-.contact-card a{color:#075b24;font-weight:bold;text-decoration:none}
-
-footer{background:#062b63;color:white;text-align:center;padding:35px 20px}
-footer strong{color:#d9a514}
-
-@media(max-width:850px){
-.cards{grid-template-columns:1fr 1fr}
-.gallery-grid{grid-template-columns:1fr 1fr}
-nav{display:none}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
+
+:root{
+    --blue:#062b63;
+    --green:#075b24;
+    --gold:#d9a514;
+    --light:#f4f8f5;
+    --dark:#17251b;
+    --white:#ffffff;
+    --gray:#666666;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+/* =========================================================
+   HEADER / LOGO / NAVIGATION
+========================================================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:rgba(6,43,99,.98);
+    box-shadow:0 3px 18px rgba(0,0,0,.2);
+}
+
+.navbar{
+    max-width:1250px;
+    min-height:76px;
+    margin:auto;
+    padding:8px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    min-width:0;
+}
+
+.logo-container{
+    width:58px;
+    height:58px;
+    min-width:58px;
+    border-radius:50%;
+    background:white;
+    border:3px solid var(--gold);
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#websiteLogo{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.default-logo{
+    font-size:30px;
+}
+
+.brand-name{
+    font-size:12px;
+    font-weight:bold;
+    line-height:1.3;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:4px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 10px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+nav a:hover{
+    background:var(--gold);
+    color:#172000;
+}
+
+/* =========================================================
+   HERO / HOME
+========================================================= */
+
+.hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:90px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(6,43,99,.97),
+        rgba(7,91,36,.94)
+    );
+}
+
+.hero-content{
+    max-width:950px;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid var(--gold);
+    border-radius:30px;
+    color:var(--gold);
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,70px);
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-description{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:32px;
+}
+
+.hero-buttons a{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.hero-primary{
+    background:var(--gold);
+    color:#172000;
+}
+
+.hero-secondary{
+    color:white;
+    border:2px solid white;
+}
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section{
+    padding:85px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:var(--blue);
+}
+
+.section-title p{
+    color:var(--gray);
+    max-width:700px;
+    margin:8px auto 0;
+}
+
+.gold-line{
+    width:70px;
+    height:4px;
+    background:var(--gold);
+    border-radius:5px;
+    margin:14px auto;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section{
+    background:white;
+}
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    padding:42px;
+    background:
+    linear-gradient(
+        135deg,
+        #f4faf6,
+        #fffaf0
+    );
+    border-left:6px solid var(--green);
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.about-box p{
+    font-size:20px;
+}
+
+/* =========================================================
+   PROGRAMS
+========================================================= */
+
+.programs-section{
+    background:#eef5f0;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    border-top:4px solid var(--gold);
+}
+
+.card-icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:var(--blue);
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+}
+
+/* =========================================================
+   AREAS OF WORK
+========================================================= */
+
+.areas-section{
+    background:white;
+}
+
+/* =========================================================
+   FOUNDER'S PHILOSOPHY
+========================================================= */
+
+.philosophy-section{
+    background:
+    linear-gradient(
+        135deg,
+        var(--green),
+        var(--blue)
+    );
+    color:white;
+}
+
+.philosophy-section .section-title h2{
+    color:white;
+}
+
+.philosophy-box{
+    max-width:900px;
+    margin:auto;
+    padding:45px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+}
+
+.philosophy-box p{
+    font-size:22px;
+}
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+.events-section{
+    background:#f4f8f5;
+}
+
+.event-date{
+    display:inline-block;
+    padding:6px 13px;
+    border-radius:20px;
+    background:var(--gold);
+    color:#172000;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news-section{
+    background:white;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-section{
+    background:#eef5f0;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    width:100%;
+    height:220px;
+    border-radius:17px;
+    overflow:hidden;
+    background:#ddd;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-empty{
+    grid-column:1/-1;
+    text-align:center;
+    padding:45px 20px;
+    background:white;
+    border-radius:20px;
+    color:#777;
+}
+
+/* =========================================================
+   DONATION
+========================================================= */
+
+.donation-section{
+    padding:90px 20px;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--blue),
+        var(--green)
+    );
+}
+
+.donation-container{
+    max-width:720px;
+    margin:auto;
+    padding:45px 25px;
+    background:rgba(255,255,255,.97);
+    border-radius:30px;
+    box-shadow:0 15px 50px rgba(0,0,0,.25);
+}
+
+.donation-icon{
+    font-size:48px;
+}
+
+.donation-container h2{
+    font-size:38px;
+    color:var(--blue);
+    margin:8px 0 12px;
+}
+
+.donation-description{
+    max-width:600px;
+    margin:0 auto 25px;
+    color:#555;
+}
+
+/* QR */
+
+.qr-box{
+    width:270px;
+    height:270px;
+    margin:25px auto;
+    padding:10px;
+    background:white;
+    border:3px solid var(--gold);
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+#donationQR{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:none;
+}
+
+.qr-placeholder{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#777;
+    padding:20px;
+}
+
+.scan-text{
+    color:var(--green);
+    font-weight:bold;
+}
+
+/* UPI */
+
+.upi-box{
+    padding:18px;
+    background:#eef6f0;
+    border-radius:15px;
+    margin:22px auto;
+}
+
+.upi-label{
+    display:block;
+    color:#666;
+    font-size:14px;
+}
+
+#upiId{
+    display:block;
+    margin-top:4px;
+    color:var(--blue);
+    font-size:19px;
+    word-break:break-all;
+}
+
+.copy-upi{
+    margin-top:10px;
+    padding:9px 18px;
+    border:0;
+    border-radius:20px;
+    background:var(--blue);
+    color:white;
+    font-weight:bold;
+}
+
+/* AMOUNTS */
+
+.amount-title{
+    color:var(--blue);
+    margin:25px 0 14px;
+}
+
+.amount-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.amount-buttons button{
+    padding:12px 21px;
+    border:2px solid var(--gold);
+    border-radius:25px;
+    background:white;
+    color:var(--blue);
+    font-weight:bold;
+    font-size:16px;
+}
+
+.amount-buttons button:hover{
+    background:var(--gold);
+    color:#172000;
+}
+
+/* CUSTOM AMOUNT */
+
+.custom-amount{
+    margin:25px auto;
+}
+
+.custom-amount label{
+    display:block;
+    margin-bottom:9px;
+    color:#444;
+    font-weight:bold;
+}
+
+.amount-input{
+    width:270px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    border:2px solid var(--gold);
+    border-radius:12px;
+    overflow:hidden;
+    background:white;
+}
+
+.amount-symbol{
+    padding-left:14px;
+    font-size:21px;
+    color:var(--blue);
+    font-weight:bold;
+}
+
+#donationAmount{
+    width:100%;
+    padding:13px;
+    border:0;
+    outline:0;
+    font-size:17px;
+}
+
+/* DONATE BUTTON */
+
+.donate-button{
+    padding:15px 35px;
+    border:0;
+    border-radius:30px;
+    background:var(--gold);
+    color:#172000;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.donate-button:hover{
+    transform:translateY(-2px);
+}
+
+#donationStatus{
+    min-height:22px;
+    margin-top:14px;
+    color:var(--green);
+    font-weight:bold;
+}
+
+.payment-note{
+    margin-top:15px;
+    color:#777;
+    font-size:13px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section{
+    background:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.contact-card{
+    padding:30px;
+    background:#eef5f0;
+    border-radius:20px;
+    text-align:center;
+}
+
+.contact-card h3{
+    color:var(--blue);
+    margin-bottom:8px;
+}
+
+.contact-card a{
+    color:var(--green);
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:var(--blue);
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
+
+footer strong{
+    color:var(--gold);
+}
+
+.footer-links{
+    margin-top:15px;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 7px;
+    font-size:14px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:950px){
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    nav{
+        display:none;
+    }
+
+}
+
 @media(max-width:600px){
-section{padding:55px 15px}
-.cards,.contact-grid{grid-template-columns:1fr}
-.gallery-grid{grid-template-columns:1fr 1fr}
-.hero h1{font-size:38px}
-.logo{width:48px;height:48px}
-.brand{font-size:10px}
-.qr-box{width:230px;height:230px}
+
+    section{
+        padding:60px 15px;
+    }
+
+    .navbar{
+        justify-content:center;
+    }
+
+    .brand-name{
+        font-size:10px;
+    }
+
+    .hero{
+        min-height:620px;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .cards,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-item{
+        height:160px;
+    }
+
+    .about-box,
+    .philosophy-box{
+        padding:27px 18px;
+    }
+
+    .philosophy-box p{
+        font-size:18px;
+    }
+
+    .qr-box{
+        width:235px;
+        height:235px;
+    }
+
 }
+
+/* =========================================================
+   END CSS
+========================================================= */
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
 <header>
-<div class="nav">
+
+<div class="navbar">
 
 <div class="brand">
-<img id="siteLogo" class="logo" alt="IAESNAR Logo">
-<span>INDIAN ASSOCIATION OF EDUCATION,<br>SCIENTIFIC, NATURE AWARENESS<br>AND RESPONSIBILITY</span>
+
+<div class="logo-container">
+
+<img
+id="websiteLogo"
+alt="IAESNAR Logo">
+
+<div
+id="defaultLogo"
+class="default-logo">
+🇮🇳
 </div>
 
+</div>
+
+<div class="brand-name">
+
+INDIAN ASSOCIATION OF EDUCATION,<br>
+SCIENTIFIC, NATURE AWARENESS<br>
+AND RESPONSIBILITY
+
+</div>
+
+</div>
+
+
 <nav>
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#programs">Programs</a>
@@ -124,491 +814,1404 @@ section{padding:55px 15px}
 <a href="#gallery">Gallery</a>
 <a href="#donate">Donate</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </div>
+
 </header>
 
 
-<section id="home" class="hero">
+<!-- =======================================================
+     1. HOME
+======================================================= -->
+
+<section
+id="home"
+class="hero">
+
 <div class="hero-content">
 
-<div class="badge">🇮🇳 Serving Society & Nature</div>
+<div class="hero-badge">
+🇮🇳 Serving Society & Nature
+</div>
 
-<h1>IAESNAR<br><span>Education • Science • Nature</span></h1>
+<h1>
+IAESNAR<br>
+<span>Education • Science • Nature</span>
+</h1>
 
-<p>Indian Association of Education, Scientific, Nature Awareness and Responsibility</p>
+<p
+id="homeDescription"
+class="hero-description">
 
-<p style="margin-top:15px">
-Over 20 years of service & responsibility towards needy people and country 🇮🇳🏃
+Indian Association of Education,
+Scientific, Nature Awareness and Responsibility
+
+</p>
+
+<p
+id="homeTagline"
+style="margin-top:15px">
+
+Over 20 years of service & responsibility
+towards needy people and country 🇮🇳
+
 </p>
 
 <div class="hero-buttons">
-<a class="btn1" href="#about">Learn More</a>
-<a class="btn2" href="#donate">❤️ Donate</a>
+
+<a
+href="#about"
+class="hero-primary">
+Learn More
+</a>
+
+<a
+href="#donate"
+class="hero-secondary">
+❤️ Donate
+</a>
+
 </div>
 
 </div>
+
 </section>
 
 
-<section id="about" class="about">
+<!-- =======================================================
+     2. ABOUT US
+======================================================= -->
+
+<section
+id="about"
+class="about-section">
+
 <div class="container">
 
-<div class="title">
+<div class="section-title">
+
 <h2>About Us</h2>
-<div class="line"></div>
+
+<div class="gold-line"></div>
+
+<p>
+Our journey of service and responsibility.
+</p>
+
 </div>
 
 <div class="about-box">
-<p id="aboutText">
-Over 20 years of service & responsibility towards needy people and country 🇮🇳🏃
+
+<p id="aboutContent">
+
+Over 20 years of service & responsibility
+towards needy people and country 🇮🇳🏃
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
 
-<section id="programs" class="programs">
+<!-- =======================================================
+     3. PROGRAMS
+======================================================= -->
+
+<section
+id="programs"
+class="programs-section">
+
 <div class="container">
 
-<div class="title">
+<div class="section-title">
+
 <h2>Our Programs</h2>
-<div class="line"></div>
+
+<div class="gold-line"></div>
+
+<p>
+Educational and scientific activities
+for students and society.
+</p>
+
 </div>
 
-<div class="cards">
 
-<div class="card">
-<div class="icon">✍️</div>
-<h3>Essay Writing</h3>
-<p>Conducting essay writing activities to encourage creative thinking and awareness.</p>
-</div>
+<div
+id="programsContainer"
+class="cards">
 
-<div class="card">
-<div class="icon">🎤</div>
-<h3>Elocution</h3>
-<p>Encouraging students to develop communication, confidence and public speaking skills.</p>
-</div>
-
-<div class="card">
-<div class="icon">🔬</div>
-<h3>Science Olympiad Exams</h3>
-<p>Promoting scientific knowledge and curiosity through competitive examinations.</p>
-</div>
 
 <div class="card">
-<div class="icon">🧪</div>
-<h3>NEET Model Exams</h3>
-<p>Conducting model examinations to help students prepare for NEET.</p>
+
+<div class="card-icon">
+✍️
 </div>
+
+<h3>
+Essay Writing
+</h3>
+
+<p>
+Conducting essay writing activities
+to encourage creative thinking
+and awareness.
+</p>
+
+</div>
+
 
 <div class="card">
-<div class="icon">📐</div>
-<h3>JEE Model Exams</h3>
-<p>Providing examination practice and academic support for JEE aspirants.</p>
+
+<div class="card-icon">
+🎤
+</div>
+
+<h3>
+Elocution
+</h3>
+
+<p>
+Encouraging students to develop
+communication, confidence and
+public speaking skills.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🔬
+</div>
+
+<h3>
+Science Olympiad Exams
+</h3>
+
+<p>
+Promoting scientific knowledge
+and curiosity through competitive
+examinations.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🧪
+</div>
+
+<h3>
+NEET Model Exams
+</h3>
+
+<p>
+Conducting model examinations
+to help students prepare
+for NEET.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+📐
+</div>
+
+<h3>
+JEE Model Exams
+</h3>
+
+<p>
+Providing examination practice
+and academic support for
+JEE aspirants.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<section id="areas" class="areas">
+<!-- =======================================================
+     4. AREAS OF WORK
+======================================================= -->
+
+<section
+id="areas"
+class="areas-section">
+
 <div class="container">
 
-<div class="title">
-<h2>Areas of Work</h2>
-<div class="line"></div>
+<div class="section-title">
+
+<h2>
+Areas of Work
+</h2>
+
+<div class="gold-line"></div>
+
 </div>
 
-<div class="cards">
 
-<div class="card">
-<div class="icon">📚</div>
-<h3>Education</h3>
-<p>Supporting educational awareness and opportunities for students and communities.</p>
-</div>
+<div
+id="areasContainer"
+class="cards">
 
-<div class="card">
-<div class="icon">🌳</div>
-<h3>Environment</h3>
-<p>Promoting awareness, protection of nature and responsible use of natural resources.</p>
-</div>
 
 <div class="card">
-<div class="icon">🤝</div>
-<h3>Political & Social Awareness</h3>
-<p>Encouraging responsible citizenship and social awareness in society.</p>
+
+<div class="card-icon">
+📚
+</div>
+
+<h3>
+Education
+</h3>
+
+<p>
+Supporting educational awareness
+and opportunities for students
+and communities.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🌳
+</div>
+
+<h3>
+Environment
+</h3>
+
+<p>
+Promoting awareness, protection
+of nature and responsible use
+of natural resources.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🤝
+</div>
+
+<h3>
+Political & Social Awareness
+</h3>
+
+<p>
+Encouraging responsible citizenship
+and social awareness in society.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<section id="philosophy" class="philosophy">
+<!-- =======================================================
+     5. FOUNDER'S PHILOSOPHY
+======================================================= -->
+
+<section
+id="philosophy"
+class="philosophy-section">
+
 <div class="container">
 
-<div class="title">
-<h2>Founder's Philosophy</h2>
-<div class="line"></div>
+<div class="section-title">
+
+<h2>
+Founder's Philosophy
+</h2>
+
+<div class="gold-line"></div>
+
 </div>
+
 
 <div class="philosophy-box">
-<p id="philosophyText">
-To improve Scientific Awareness and Responsibility towards Nature and protection of Natural Resources of our country.
+
+<p id="philosophyContent">
+
+To improve Scientific Awareness
+and Responsibility towards Nature
+and protection of Natural Resources
+of our country.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
 
-<section id="events" class="events">
+<!-- =======================================================
+     6. EVENTS
+======================================================= -->
+
+<section
+id="events"
+class="events-section">
+
 <div class="container">
 
-<div class="title">
-<h2>Events</h2>
-<div class="line"></div>
+<div class="section-title">
+
+<h2>
+Events
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Our activities and upcoming programs.
+</p>
+
 </div>
 
-<div class="cards" id="eventsContainer">
+
+<div
+id="eventsContainer"
+class="cards">
+
+
 <div class="card">
-<div class="icon">📅</div>
-<h3>Upcoming Programs</h3>
-<p>Details of upcoming activities will be announced here.</p>
+
+<div class="event-date">
+Upcoming
 </div>
+
+<h3>
+Educational Activities
+</h3>
+
+<p>
+Details of upcoming educational
+activities will be announced here.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
+
 </section>
 
 
-<section id="news" class="news">
+<!-- =======================================================
+     7. NEWS
+======================================================= -->
+
+<section
+id="news"
+class="news-section">
+
 <div class="container">
 
-<div class="title">
-<h2>News & Announcements</h2>
-<div class="line"></div>
+<div class="section-title">
+
+<h2>
+News & Announcements
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Latest information from IAESNAR.
+</p>
+
 </div>
 
-<div class="cards" id="newsContainer">
+
+<div
+id="newsContainer"
+class="cards">
+
+
 <div class="card">
-<div class="icon">📰</div>
-<h3>Welcome to IAESNAR</h3>
-<p>Information and announcements will appear here.</p>
+
+<div class="card-icon">
+📰
 </div>
+
+<h3>
+Welcome to IAESNAR
+</h3>
+
+<p>
+Information, announcements and
+updates will appear here.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
+
 </section>
 
 
-<section id="gallery" class="gallery">
+<!-- =======================================================
+     8. GALLERY
+======================================================= -->
+
+<section
+id="gallery"
+class="gallery-section">
+
 <div class="container">
 
-<div class="title">
-<h2>Gallery</h2>
-<div class="line"></div>
-<p>Photos from our activities and programs.</p>
+<div class="section-title">
+
+<h2>
+Gallery
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Photos from our activities and programs.
+</p>
+
 </div>
 
-<div id="galleryGrid" class="gallery-grid">
+
+<div
+id="galleryContainer"
+class="gallery-grid">
+
 <div class="gallery-empty">
-No gallery photos added yet.
-</div>
+
+📷 Gallery photos will appear here.
+
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
-<!-- ================= DONATION ================= -->
+<!-- =======================================================
+     9-13. DONATION
+======================================================= -->
 
-<section id="donate" class="donation">
+<section
+id="donate"
+class="donation-section">
 
-<div class="donation-box">
+<div class="donation-container">
 
-<div style="font-size:45px">❤️</div>
 
-<h2>Support IAESNAR</h2>
+<div class="donation-icon">
+❤️
+</div>
 
-<p style="margin:12px auto 20px;max-width:580px">
+
+<h2>
+Support IAESNAR
+</h2>
+
+
+<p class="donation-description"
+id="donationMessage">
+
 Your contribution helps us support education,
 scientific awareness, environmental protection
 and social responsibility.
+
 </p>
+
+
+<!-- DONATION QR -->
 
 <div class="qr-box">
 
 <img
 id="donationQR"
-class="qr"
-alt="IAESNAR Donation QR"
-style="display:none">
+alt="IAESNAR Donation QR Code">
 
-<div id="qrMissing" class="qr-missing">
-Donation QR will be added by Admin.
+<div
+id="qrPlaceholder"
+class="qr-placeholder">
+
+📱<br>
+Donation QR will be uploaded
+through Admin.
+
 </div>
 
 </div>
 
-<p style="color:#075b24;font-weight:bold">
+
+<p class="scan-text">
+
 📱 Scan the QR code using any UPI app
+
 </p>
 
-<div class="upi">
 
-<small>UPI ID</small>
+<!-- UPI ID -->
+
+<div class="upi-box">
+
+<span class="upi-label">
+UPI ID
+</span>
+
 
 <strong id="upiId">
 7013025119-9@axl
 </strong>
 
-<button class="copy" onclick="copyUPI()">
+
+<button
+type="button"
+class="copy-upi"
+onclick="copyUPI()">
+
 📋 Copy UPI ID
+
 </button>
 
 </div>
 
-<h3 style="color:#062b63;margin-top:25px">
+
+<!-- AMOUNT BUTTONS -->
+
+<h3 class="amount-title">
+
 Choose Donation Amount
+
 </h3>
 
-<div class="amounts">
 
-<button onclick="selectAmount(100)">₹100</button>
-<button onclick="selectAmount(200)">₹200</button>
-<button onclick="selectAmount(500)">₹500</button>
-<button onclick="selectAmount(1000)">₹1,000</button>
-<button onclick="selectAmount(2000)">₹2,000</button>
+<div class="amount-buttons">
+
+
+<button
+type="button"
+onclick="selectAmount(100)">
+
+₹100
+
+</button>
+
+
+<button
+type="button"
+onclick="selectAmount(200)">
+
+₹200
+
+</button>
+
+
+<button
+type="button"
+onclick="selectAmount(500)">
+
+₹500
+
+</button>
+
+
+<button
+type="button"
+onclick="selectAmount(1000)">
+
+₹1,000
+
+</button>
+
+
+<button
+type="button"
+onclick="selectAmount(2000)">
+
+₹2,000
+
+</button>
+
 
 </div>
 
-<label>
+
+<!-- CUSTOM AMOUNT -->
+
+<div class="custom-amount">
+
+<label for="donationAmount">
+
 Or enter your own amount
+
 </label>
 
+
 <div class="amount-input">
-<span>₹</span>
+
+<span class="amount-symbol">
+₹
+</span>
+
+
 <input
 id="donationAmount"
 type="number"
 min="1"
 step="1"
 placeholder="Enter amount">
+
 </div>
 
-<button class="donate-btn" onclick="makeDonation()">
+</div>
+
+
+<!-- DONATE BUTTON -->
+
+<button
+type="button"
+class="donate-button"
+onclick="makeDonation()">
+
 ❤️ Donate Now
+
 </button>
 
-<p id="status"></p>
 
-<p style="font-size:13px;color:#777;margin-top:15px">
-The Donate button opens a UPI payment app on supported devices.
+<p id="donationStatus"></p>
+
+
+<p class="payment-note">
+
+After clicking Donate Now, your UPI app
+will open on supported devices.
+
 </p>
 
+
 </div>
+
 </section>
 
 
-<section id="contact" class="contact">
+<!-- =======================================================
+     14. CONTACT
+======================================================= -->
+
+<section
+id="contact"
+class="contact-section">
+
 <div class="container">
 
-<div class="title">
-<h2>Contact Us</h2>
-<div class="line"></div>
+<div class="section-title">
+
+<h2>
+Contact Us
+</h2>
+
+<div class="gold-line"></div>
+
+<p>
+Get in touch with IAESNAR.
+</p>
+
 </div>
+
 
 <div class="contact-grid">
 
-<div class="contact-card">
-<h3>📞 Phone</h3>
-<a href="tel:9704186759">9704186759</a>
-</div>
 
 <div class="contact-card">
-<h3>📧 Email</h3>
-<a href="mailto:grkrk9@gmail.com">grkrk9@gmail.com</a>
+
+<h3>
+📞 Phone
+</h3>
+
+<a
+id="phoneLink"
+href="tel:9704186759">
+
+9704186759
+
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+📧 Email
+</h3>
+
+<a
+id="emailLink"
+href="mailto:grkrk9@gmail.com">
+
+grkrk9@gmail.com
+
+</a>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
 <footer>
 
-<p><strong>IAESNAR</strong></p>
-
 <p>
-Indian Association of Education, Scientific,
-Nature Awareness and Responsibility
+<strong>
+IAESNAR
+</strong>
 </p>
 
-<p>Over 20 years of service & responsibility towards needy people and country 🇮🇳</p>
+<p>
+Indian Association of Education,
+Scientific, Nature Awareness
+and Responsibility
+</p>
 
-<p style="margin-top:15px;font-size:13px">
+<p style="margin-top:10px">
+
+Over 20 years of service & responsibility
+towards needy people and country 🇮🇳
+
+</p>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#programs">Programs</a>
+<a href="#gallery">Gallery</a>
+<a href="#donate">Donate</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<p style="margin-top:20px;font-size:13px">
+
 © 2026 IAESNAR. All Rights Reserved.
+
 </p>
 
 </footer>
 
 
+<!-- =======================================================
+     JAVASCRIPT
+     TEMPORARY ADMIN DATA CONNECTION
+======================================================= -->
+
 <script>
 
-/* ================= DEFAULT LOGO ================= */
+/*
+============================================================
+IAESNAR INDEX DATA SYSTEM
 
-const savedLogo = localStorage.getItem("iaesnar_logo");
+The future admin.html will write these values.
 
-if(savedLogo){
+Currently localStorage is used so the page can be tested
+before Firebase is connected.
+============================================================
+*/
 
-    document.getElementById("siteLogo").src = savedLogo;
 
-}else{
+/* =========================================================
+   LOGO
+========================================================= */
 
-    document.getElementById("siteLogo").style.display = "none";
+function loadLogo(){
+
+    const logo =
+    localStorage.getItem("iaesnar_logo");
+
+    const image =
+    document.getElementById("websiteLogo");
+
+    const defaultLogo =
+    document.getElementById("defaultLogo");
+
+
+    if(logo){
+
+        image.src = logo;
+
+        image.style.display = "block";
+
+        defaultLogo.style.display = "none";
+
+    }else{
+
+        image.style.display = "none";
+
+        defaultLogo.style.display = "block";
+
+    }
 
 }
 
 
-/* ================= DONATION QR ================= */
+/* =========================================================
+   ABOUT
+========================================================= */
 
-const savedQR = localStorage.getItem("iaesnar_qr");
+function loadAbout(){
 
-if(savedQR){
+    const data =
+    localStorage.getItem("iaesnar_about");
 
-    document.getElementById("donationQR").src = savedQR;
-    document.getElementById("donationQR").style.display = "block";
-    document.getElementById("qrMissing").style.display = "none";
+    if(data){
+
+        document.getElementById(
+            "aboutContent"
+        ).textContent = data;
+
+    }
 
 }
 
 
-/* ================= UPI ================= */
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
 
-let UPI_ID =
-localStorage.getItem("iaesnar_upi") ||
-"7013025119-9@axl";
+function loadPhilosophy(){
 
-document.getElementById("upiId").textContent = UPI_ID;
+    const data =
+    localStorage.getItem(
+        "iaesnar_philosophy"
+    );
+
+    if(data){
+
+        document.getElementById(
+            "philosophyContent"
+        ).textContent = data;
+
+    }
+
+}
 
 
-/* ================= COPY UPI ================= */
+/* =========================================================
+   UPI
+========================================================= */
 
-function copyUPI(){
+function loadUPI(){
 
-    navigator.clipboard.writeText(UPI_ID)
-    .then(function(){
+    const upi =
+    localStorage.getItem(
+        "iaesnar_upi"
+    ) ||
+    "7013025119-9@axl";
 
-        document.getElementById("status").textContent =
-        "UPI ID copied successfully ✅";
 
-    })
-    .catch(function(){
+    document.getElementById(
+        "upiId"
+    ).textContent = upi;
 
-        alert("UPI ID: " + UPI_ID);
+}
+
+
+/* =========================================================
+   DONATION MESSAGE
+========================================================= */
+
+function loadDonationMessage(){
+
+    const message =
+    localStorage.getItem(
+        "iaesnar_donation_message"
+    );
+
+    if(message){
+
+        document.getElementById(
+            "donationMessage"
+        ).textContent = message;
+
+    }
+
+}
+
+
+/* =========================================================
+   DONATION QR
+========================================================= */
+
+function loadQR(){
+
+    const qr =
+    localStorage.getItem(
+        "iaesnar_qr"
+    );
+
+
+    const image =
+    document.getElementById(
+        "donationQR"
+    );
+
+
+    const placeholder =
+    document.getElementById(
+        "qrPlaceholder"
+    );
+
+
+    if(qr){
+
+        image.src = qr;
+
+        image.style.display =
+        "block";
+
+        placeholder.style.display =
+        "none";
+
+    }else{
+
+        image.style.display =
+        "none";
+
+        placeholder.style.display =
+        "flex";
+
+    }
+
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+function loadGallery(){
+
+    const gallery =
+    JSON.parse(
+        localStorage.getItem(
+            "iaesnar_gallery"
+        ) || "[]"
+    );
+
+
+    const container =
+    document.getElementById(
+        "galleryContainer"
+    );
+
+
+    if(!gallery.length){
+
+        container.innerHTML = `
+            <div class="gallery-empty">
+                📷 Gallery photos will appear here.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    gallery.forEach(function(photo){
+
+        const item =
+        document.createElement("div");
+
+        item.className =
+        "gallery-item";
+
+
+        const image =
+        document.createElement("img");
+
+        image.src = photo;
+
+        image.alt =
+        "IAESNAR Gallery Photo";
+
+
+        item.appendChild(image);
+
+        container.appendChild(item);
 
     });
 
 }
 
 
-/* ================= QUICK AMOUNT ================= */
+/* =========================================================
+   EVENTS
+========================================================= */
+
+function loadEvents(){
+
+    const events =
+    JSON.parse(
+        localStorage.getItem(
+            "iaesnar_events"
+        ) || "[]"
+    );
+
+
+    if(!events.length){
+
+        return;
+
+    }
+
+
+    const container =
+    document.getElementById(
+        "eventsContainer"
+    );
+
+
+    container.innerHTML = "";
+
+
+    events.forEach(function(event){
+
+        const card =
+        document.createElement("div");
+
+        card.className =
+        "card";
+
+
+        card.innerHTML = `
+
+            <div class="event-date">
+                ${escapeHTML(event.date || "Event")}
+            </div>
+
+            <h3>
+                ${escapeHTML(event.title || "")}
+            </h3>
+
+            <p>
+                ${escapeHTML(event.description || "")}
+            </p>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+function loadNews(){
+
+    const news =
+    JSON.parse(
+        localStorage.getItem(
+            "iaesnar_news"
+        ) || "[]"
+    );
+
+
+    if(!news.length){
+
+        return;
+
+    }
+
+
+    const container =
+    document.getElementById(
+        "newsContainer"
+    );
+
+
+    container.innerHTML = "";
+
+
+    news.forEach(function(item){
+
+        const card =
+        document.createElement("div");
+
+        card.className =
+        "card";
+
+
+        card.innerHTML = `
+
+            <div class="card-icon">
+                📰
+            </div>
+
+            <h3>
+                ${escapeHTML(item.title || "")}
+            </h3>
+
+            <p>
+                ${escapeHTML(item.description || "")}
+            </p>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   HTML SAFETY
+========================================================= */
+
+function escapeHTML(value){
+
+    const div =
+    document.createElement("div");
+
+    div.textContent =
+    value;
+
+    return div.innerHTML;
+
+}
+
+
+/* =========================================================
+   QUICK DONATION AMOUNT
+========================================================= */
 
 function selectAmount(amount){
 
-    document.getElementById("donationAmount").value = amount;
+    document.getElementById(
+        "donationAmount"
+    ).value = amount;
 
-    document.getElementById("status").textContent =
+
+    document.getElementById(
+        "donationStatus"
+    ).textContent =
     "Selected amount: ₹" +
     amount.toLocaleString("en-IN");
 
 }
 
 
-/* ================= DONATE ================= */
+/* =========================================================
+   COPY UPI
+========================================================= */
+
+function copyUPI(){
+
+    const upi =
+    document.getElementById(
+        "upiId"
+    ).textContent.trim();
+
+
+    if(
+        navigator.clipboard &&
+        window.isSecureContext
+    ){
+
+        navigator.clipboard
+        .writeText(upi)
+        .then(function(){
+
+            document.getElementById(
+                "donationStatus"
+            ).textContent =
+            "UPI ID copied successfully ✅";
+
+        });
+
+    }else{
+
+        alert(
+            "UPI ID: " + upi
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   UPI DONATION
+========================================================= */
 
 function makeDonation(){
 
     const amount =
-    Number(document.getElementById("donationAmount").value);
+    Number(
+        document.getElementById(
+            "donationAmount"
+        ).value
+    );
 
-    if(!amount || amount <= 0){
 
-        document.getElementById("status").textContent =
+    if(
+        !amount ||
+        amount <= 0 ||
+        !Number.isFinite(amount)
+    ){
+
+        document.getElementById(
+            "donationStatus"
+        ).textContent =
         "Please enter a valid donation amount.";
 
         return;
 
     }
 
+
+    if(amount > 10000000){
+
+        document.getElementById(
+            "donationStatus"
+        ).textContent =
+        "Please enter a smaller amount.";
+
+        return;
+
+    }
+
+
+    const upi =
+    document.getElementById(
+        "upiId"
+    ).textContent.trim();
+
+
     const upiURL =
     "upi://pay" +
-    "?pa=" + encodeURIComponent(UPI_ID) +
-    "&pn=" + encodeURIComponent("IAESNAR") +
-    "&am=" + encodeURIComponent(amount.toFixed(2)) +
+
+    "?pa=" +
+    encodeURIComponent(upi) +
+
+    "&pn=" +
+    encodeURIComponent("IAESNAR") +
+
+    "&am=" +
+    encodeURIComponent(
+        amount.toFixed(2)
+    ) +
+
     "&cu=INR";
 
-    document.getElementById("status").textContent =
+
+    document.getElementById(
+        "donationStatus"
+    ).textContent =
     "Opening UPI payment...";
 
-    window.location.href = upiURL;
+
+    window.location.href =
+    upiURL;
 
 }
 
 
-/* ================= LOAD ADMIN DATA ================= */
+/* =========================================================
+   LOAD EVERYTHING
+========================================================= */
 
-const savedAbout =
-localStorage.getItem("iaesnar_about");
+function loadAllAdminData(){
 
-if(savedAbout){
-    document.getElementById("aboutText").textContent =
-    savedAbout;
+    loadLogo();
+
+    loadAbout();
+
+    loadPhilosophy();
+
+    loadUPI();
+
+    loadDonationMessage();
+
+    loadQR();
+
+    loadGallery();
+
+    loadEvents();
+
+    loadNews();
+
 }
 
 
-const savedPhilosophy =
-localStorage.getItem("iaesnar_philosophy");
+/* =========================================================
+   START
+========================================================= */
 
-if(savedPhilosophy){
-    document.getElementById("philosophyText").textContent =
-    savedPhilosophy;
-}
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
 
+        loadAllAdminData();
 
-/* ================= LOAD GALLERY ================= */
-
-const gallery =
-JSON.parse(
-localStorage.getItem("iaesnar_gallery") || "[]"
+    }
 );
-
-const galleryGrid =
-document.getElementById("galleryGrid");
-
-if(gallery.length > 0){
-
-    galleryGrid.innerHTML = "";
-
-    gallery.forEach(function(photo){
-
-        const img =
-        document.createElement("img");
-
-        img.src = photo;
-
-        img.alt = "IAESNAR Gallery";
-
-        galleryGrid.appendChild(img);
-
-    });
-
-}
 
 </script>
 
