@@ -3,2121 +3,455 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IAESNAR | Indian Association of Education, Scientific, Nature Awareness and Responsibility</title>
-
-<meta name="description" content="Indian Association of Education, Scientific, Nature Awareness and Responsibility - Education, Science, Nature Awareness and Social Responsibility.">
+<title>IAESNAR | Education • Science • Nature</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-:root{
-    --green:#168A2F;
-    --dark-green:#075B24;
-    --blue:#062B63;
-    --blue2:#0B4FA2;
-    --gold:#D9A514;
-    --light:#F5FAF3;
-    --light-green:#E8F5E9;
-    --white:#FFFFFF;
-    --text:#10251A;
-    --gray:#607064;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    color:var(--text);
-    background:var(--light);
-    line-height:1.65;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(6,43,99,.97);
-    box-shadow:0 4px 20px rgba(0,0,0,.2);
-}
-
-.navbar{
-    max-width:1250px;
-    margin:auto;
-    min-height:78px;
-    padding:10px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:white;
-    text-decoration:none;
-    min-width:0;
-}
-
-.brand-logo{
-    width:55px;
-    height:55px;
-    background:white;
-    border-radius:50%;
-    object-fit:contain;
-    padding:4px;
-    border:2px solid white;
-}
-
-.brand-text{
-    min-width:0;
-}
-
-.brand-text strong{
-    display:block;
-    font-family:Georgia,serif;
-    font-size:1.35rem;
-}
-
-.brand-text span{
-    display:block;
-    color:#dce9ff;
-    font-size:.72rem;
-}
-
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    gap:3px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:8px 9px;
-    border-radius:7px;
-    font-size:.82rem;
-    font-weight:bold;
-}
-
-nav a:hover{
-    background:rgba(255,255,255,.15);
-    color:var(--gold);
-}
-
-.menu-button{
-    display:none;
-    border:none;
-    background:transparent;
-    color:white;
-    font-size:30px;
-    cursor:pointer;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:88vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:80px 20px;
-
-    background:
-    linear-gradient(
-        rgba(6,43,99,.78),
-        rgba(7,91,36,.86)
-    ),
-    url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=85");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:950px;
-}
-
-.hero-logo{
-    width:155px;
-    height:155px;
-    object-fit:contain;
-    background:white;
-    border-radius:50%;
-    padding:8px;
-    border:5px solid white;
-    box-shadow:0 12px 50px rgba(0,0,0,.4);
-}
-
-.hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(3.2rem,9vw,6.5rem);
-    line-height:1;
-    margin:22px 0 12px;
-}
-
-.hero h2{
-    font-size:clamp(1rem,2.5vw,1.45rem);
-    font-weight:500;
-    max-width:850px;
-    margin:auto;
-}
-
-.hero-description{
-    margin:18px auto 0;
-    max-width:720px;
-    font-size:1.05rem;
-}
-
-.motto{
-    display:inline-block;
-    margin-top:22px;
-    background:white;
-    color:var(--blue);
-    padding:9px 23px;
-    border-radius:50px;
-    font-weight:800;
-    letter-spacing:.08em;
-}
-
-.hero-buttons{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    border:none;
-    cursor:pointer;
-    padding:12px 23px;
-    border-radius:50px;
-    font-weight:bold;
-}
-
-.btn-gold{
-    background:var(--gold);
-    color:#172000;
-}
-
-.btn-white{
-    background:white;
-    color:var(--blue);
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-/* ================= GENERAL ================= */
-
-section{
-    padding:80px 20px;
-}
-
-.container{
-    max-width:1120px;
-    margin:auto;
-}
-
-.alt{
-    background:var(--light-green);
-}
-
-.section-label{
-    color:var(--green);
-    font-size:.82rem;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-
-.section-title{
-    color:var(--blue);
-    font-family:Georgia,serif;
-    font-size:clamp(2rem,5vw,2.8rem);
-    margin:7px 0 25px;
-}
-
-.section-intro{
-    max-width:800px;
-    color:var(--gray);
-    margin-bottom:30px;
-}
-
-/* ================= ABOUT ================= */
-
-.about-background{
-    background:
-    linear-gradient(rgba(245,250,243,.93),rgba(245,250,243,.93)),
-    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=85");
-    background-size:cover;
-    background-position:center;
-}
-
-.about-box{
-    background:white;
-    padding:35px;
-    border-radius:22px;
-    border-left:6px solid var(--green);
-    box-shadow:0 10px 35px rgba(6,43,99,.08);
-}
-
-.about-box p{
-    font-size:1.12rem;
-}
-
-/* ================= CARDS ================= */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    border:1px solid #dce8df;
-    box-shadow:0 8px 28px rgba(6,43,99,.07);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(6,43,99,.14);
-}
-
-.card h3{
-    color:var(--blue);
-    margin-bottom:9px;
-}
-
-.icon{
-    font-size:35px;
-    margin-bottom:10px;
-}
-
-/* ================= PHILOSOPHY ================= */
-
-.philosophy{
-    color:white;
-
-    background:
-    linear-gradient(
-        rgba(6,43,99,.91),
-        rgba(7,91,36,.91)
-    ),
-    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=85");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
-
-.philosophy .section-title{
-    color:white;
-}
-
-.quote{
-    max-width:900px;
-    border-left:5px solid var(--gold);
-    padding:15px 25px;
-    font-family:Georgia,serif;
-    font-size:1.35rem;
-}
-
-/* ================= EVENTS ================= */
-
-.event-card{
-    border-left:5px solid var(--gold);
-}
-
-/* ================= GALLERY ================= */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-    gap:15px;
-}
-
-.gallery-item{
-    height:210px;
-    border-radius:16px;
-    overflow:hidden;
-    background:#dfe9df;
-}
-
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.4s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.06);
-}
-
-/* ================= MEMBERSHIP ================= */
-
-.membership{
-    background:
-    linear-gradient(
-        rgba(232,245,233,.93),
-        rgba(232,245,233,.93)
-    ),
-    url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=85");
-
-    background-size:cover;
-    background-position:center;
-}
-
-/* ================= DONATION ================= */
-donation-qr.png
- <!-- ================= DONATION SECTION ================= -->
-
-<section id="donate" class="donation-section">
-
-    <div class="donation-container">
-
-        <div class="donation-icon">❤️</div>
-
-        <h2>Support IAESNAR</h2>
-
-        <p class="donation-description">
-            Your contribution helps us support education,
-            scientific awareness, environmental protection
-            and social responsibility.
-        </p>
-
-        <!-- QR CODE -->
-
-        <div class="qr-box">
-
-            <img
-                src="donation-qr.png"
-                alt="IAESNAR Donation UPI QR Code"
-                class="donation-qr">
-
-        </div>
-
-        <p class="scan-text">
-            📱 Scan the QR code using any UPI app
-        </p>
-
-
-        <!-- UPI ID -->
-
-        <div class="upi-box">
-
-            <span class="upi-label">UPI ID</span>
-
-            <strong id="upiId">
-                7013025119-9@axl
-            </strong>
-
-            <button
-                type="button"
-                class="copy-upi"
-                onclick="copyUPI()">
-
-                📋 Copy UPI ID
-
-            </button>
-
-        </div>
-
-
-        <!-- QUICK AMOUNTS -->
-
-        <h3 class="amount-title">
-            Choose Donation Amount
-        </h3>
-
-        <div class="amount-buttons">
-
-            <button
-                type="button"
-                onclick="selectAmount(100)">
-                ₹100
-            </button>
-
-            <button
-                type="button"
-                onclick="selectAmount(200)">
-                ₹200
-            </button>
-
-            <button
-                type="button"
-                onclick="selectAmount(500)">
-                ₹500
-            </button>
-
-            <button
-                type="button"
-                onclick="selectAmount(1000)">
-                ₹1,000
-            </button>
-
-            <button
-                type="button"
-                onclick="selectAmount(2000)">
-                ₹2,000
-            </button>
-
-        </div>
-
-
-        <!-- CUSTOM AMOUNT -->
-
-        <div class="custom-amount-box">
-
-            <label for="donationAmount">
-                Or enter your own amount
-            </label>
-
-            <div class="amount-input">
-
-                <span>₹</span>
-
-                <input
-                    type="number"
-                    id="donationAmount"
-                    placeholder="Enter amount"
-                    min="1"
-                    step="1">
-
-            </div>
-
-        </div>
-
-
-        <!-- DONATE BUTTON -->
-
-        <button
-            type="button"
-            class="donate-button"
-            onclick="makeDonation()">
-
-            ❤️ Donate Now
-
-        </button>
-
-        <p id="donationStatus"></p>
-
-        <p class="payment-note">
-            After clicking Donate Now, your UPI app will open
-            with the selected amount.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ================= DONATION CSS ================= -->
-
-<style>
-
-.donation-section{
-
-    padding:80px 20px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #062b63,
-        #075b24
-    );
-
-    text-align:center;
-
-}
-
-.donation-container{
-
-    max-width:700px;
-
-    margin:auto;
-
-    padding:40px 25px;
-
-    background:rgba(255,255,255,0.96);
-
-    border-radius:28px;
-
-    box-shadow:
-    0 15px 45px rgba(0,0,0,0.25);
-
-}
-
-.donation-icon{
-
-    font-size:45px;
-
-    margin-bottom:10px;
-
-}
-
-.donation-container h2{
-
-    font-size:36px;
-
-    color:#062b63;
-
-    margin-bottom:12px;
-
-}
-
-.donation-description{
-
-    max-width:560px;
-
-    margin:0 auto 25px;
-
-    line-height:1.6;
-
-    color:#444;
-
-}
-
-
-/* QR */
-
-.qr-box{
-
-    width:260px;
-
-    height:260px;
-
-    margin:25px auto;
-
-    padding:10px;
-
-    background:white;
-
-    border-radius:18px;
-
-    border:3px solid #d9a514;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,0.15);
-
-}
-
-.donation-qr{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-    display:block;
-
-}
-
-.scan-text{
-
-    color:#075b24;
-
-    font-weight:bold;
-
-    margin-bottom:20px;
-
-}
-
-
-/* UPI */
-
-.upi-box{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:7px;
-
-    padding:18px;
-
-    background:#eef6f0;
-
-    border-radius:15px;
-
-    margin:20px auto;
-
-}
-
-.upi-label{
-
-    font-size:14px;
-
-    color:#666;
-
-}
-
-.upi-box strong{
-
-    font-size:19px;
-
-    color:#062b63;
-
-    word-break:break-all;
-
-}
-
-.copy-upi{
-
-    margin-top:8px;
-
-    padding:9px 18px;
-
-    border:0;
-
-    border-radius:20px;
-
-    background:#062b63;
-
-    color:white;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-}
-
-.copy-upi:hover{
-
-    background:#075b24;
-
-}
-
-
-/* AMOUNTS */
-
-.amount-title{
-
-    color:#062b63;
-
-    margin:28px 0 15px;
-
-}
-
-.amount-buttons{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:10px;
-
-}
-
-.amount-buttons button{
-
-    padding:12px 22px;
-
-    border:2px solid #d9a514;
-
-    border-radius:25px;
-
-    background:white;
-
-    color:#062b63;
-
-    font-weight:bold;
-
-    font-size:16px;
-
-    cursor:pointer;
-
-}
-
-.amount-buttons button:hover{
-
-    background:#d9a514;
-
-    color:#172000;
-
-}
-
-
-/* CUSTOM */
-
-.custom-amount-box{
-
-    margin:25px auto;
-
-}
-
-.custom-amount-box label{
-
-    display:block;
-
-    margin-bottom:10px;
-
-    color:#444;
-
-    font-weight:bold;
-
-}
-
-.amount-input{
-
-    display:flex;
-
-    align-items:center;
-
-    width:260px;
-
-    margin:auto;
-
-    border:2px solid #d9a514;
-
-    border-radius:12px;
-
-    overflow:hidden;
-
-    background:white;
-
-}
-
-.amount-input span{
-
-    padding-left:14px;
-
-    font-size:21px;
-
-    font-weight:bold;
-
-    color:#062b63;
-
-}
-
-.amount-input input{
-
-    width:100%;
-
-    padding:13px;
-
-    border:0;
-
-    outline:none;
-
-    font-size:17px;
-
-}
-
-
-/* DONATE */
-
-.donate-button{
-
-    padding:15px 35px;
-
-    border:0;
-
-    border-radius:30px;
-
-    background:#d9a514;
-
-    color:#172000;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.15);
-
-}
-
-.donate-button:hover{
-
-    transform:translateY(-2px);
-
-}
-
-#donationStatus{
-
-    margin-top:15px;
-
-    font-weight:bold;
-
-    color:#075b24;
-
-}
-
-.payment-note{
-
-    margin-top:18px;
-
-    font-size:13px;
-
-    color:#777;
-
-    line-height:1.5;
-
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#17251b;background:#f5f8f4;line-height:1.6}
+header{position:sticky;top:0;z-index:1000;background:#062b63;box-shadow:0 3px 15px #0003}
+.nav{max-width:1200px;margin:auto;min-height:72px;padding:8px 18px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;color:white;font-weight:bold;font-size:12px}
+.logo{width:55px;height:55px;border-radius:50%;background:white;border:3px solid #d9a514;object-fit:contain}
+nav{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}
+nav a{color:white;text-decoration:none;padding:8px 11px;border-radius:20px;font-size:13px;font-weight:bold}
+nav a:hover{background:#d9a514;color:#172000}
+
+.hero{min-height:650px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:70px 20px;background:linear-gradient(135deg,#062b63,#075b24)}
+.hero-content{max-width:900px}
+.badge{display:inline-block;border:1px solid #d9a514;color:#d9a514;border-radius:30px;padding:7px 18px;margin-bottom:18px;font-weight:bold}
+.hero h1{font-size:clamp(35px,6vw,65px);line-height:1.1;margin-bottom:20px}
+.hero h1 span{color:#d9a514}
+.hero p{font-size:18px}
+.hero-buttons{margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.hero-buttons a{padding:13px 25px;border-radius:30px;text-decoration:none;font-weight:bold}
+.btn1{background:#d9a514;color:#172000}
+.btn2{border:2px solid white;color:white}
+
+section{padding:75px 20px}
+.container{max-width:1150px;margin:auto}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-size:36px;color:#062b63}
+.line{width:65px;height:4px;background:#d9a514;margin:12px auto;border-radius:5px}
+.title p{color:#666}
+
+.about{background:white}
+.about-box{max-width:900px;margin:auto;padding:40px;text-align:center;border-left:6px solid #075b24;border-radius:20px;background:#f7faf7;box-shadow:0 8px 25px #0001}
+.about-box p{font-size:20px}
+
+.programs{background:#eef5f0}
+.areas{background:white}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;padding:27px;border-radius:20px;box-shadow:0 8px 25px #0001;border-top:4px solid #d9a514}
+.card h3{color:#062b63;margin:8px 0}
+.icon{font-size:35px}
+
+.philosophy{background:linear-gradient(135deg,#075b24,#062b63);color:white}
+.philosophy .title h2{color:white}
+.philosophy-box{max-width:850px;margin:auto;padding:40px;text-align:center;border:1px solid #ffffff44;border-radius:25px;background:#ffffff12}
+.philosophy-box p{font-size:21px}
+
+.gallery{background:#eef5f0}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery-grid img{width:100%;height:210px;object-fit:cover;border-radius:16px;background:#ddd}
+.gallery-empty{text-align:center;grid-column:1/-1;padding:30px;color:#777}
+
+.events{background:#f5f8f4}
+.news{background:white}
+
+.donation{background:linear-gradient(135deg,#062b63,#075b24);text-align:center}
+.donation-box{max-width:720px;margin:auto;background:#fffffff7;border-radius:30px;padding:40px 22px;box-shadow:0 15px 50px #0004}
+.donation-box h2{font-size:36px;color:#062b63}
+.qr-box{width:260px;height:260px;margin:25px auto;padding:10px;background:white;border:3px solid #d9a514;border-radius:18px}
+.qr{width:100%;height:100%;object-fit:contain}
+.qr-missing{padding-top:85px;color:#777}
+.upi{padding:18px;background:#eef6f0;border-radius:15px;margin:20px auto}
+.upi strong{display:block;color:#062b63;font-size:19px;word-break:break-all}
+button{cursor:pointer}
+.copy{margin-top:10px;padding:9px 18px;border:0;border-radius:20px;background:#062b63;color:white;font-weight:bold}
+.amounts{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:15px}
+.amounts button{padding:12px 20px;border:2px solid #d9a514;border-radius:25px;background:white;color:#062b63;font-weight:bold}
+.amounts button:hover{background:#d9a514}
+.amount-input{display:flex;width:260px;margin:15px auto;border:2px solid #d9a514;border-radius:12px;overflow:hidden;background:white}
+.amount-input span{padding:11px;font-weight:bold;color:#062b63}
+.amount-input input{width:100%;padding:12px;border:0;outline:0;font-size:17px}
+.donate-btn{padding:15px 32px;border:0;border-radius:30px;background:#d9a514;color:#172000;font-size:18px;font-weight:bold}
+#status{margin-top:12px;color:#075b24;font-weight:bold}
+
+.contact{background:white}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{text-align:center;background:#eef5f0;padding:30px;border-radius:20px}
+.contact-card h3{color:#062b63}
+.contact-card a{color:#075b24;font-weight:bold;text-decoration:none}
+
+footer{background:#062b63;color:white;text-align:center;padding:35px 20px}
+footer strong{color:#d9a514}
+
+@media(max-width:850px){
+.cards{grid-template-columns:1fr 1fr}
+.gallery-grid{grid-template-columns:1fr 1fr}
+nav{display:none}
 }
-
-
-/* MOBILE */
-
 @media(max-width:600px){
-
-    .donation-section{
-
-        padding:50px 12px;
-
-    }
-
-    .donation-container{
-
-        padding:30px 15px;
-
-    }
-
-    .donation-container h2{
-
-        font-size:29px;
-
-    }
-
-    .qr-box{
-
-        width:230px;
-
-        height:230px;
-
-    }
-
-    .amount-buttons button{
-
-        min-width:90px;
-
-    }
-
+section{padding:55px 15px}
+.cards,.contact-grid{grid-template-columns:1fr}
+.gallery-grid{grid-template-columns:1fr 1fr}
+.hero h1{font-size:38px}
+.logo{width:48px;height:48px}
+.brand{font-size:10px}
+.qr-box{width:230px;height:230px}
 }
-
 </style>
+</head>
 
-
-<!-- ================= DONATION JAVASCRIPT ================= -->
-
-<script>
-
-const IAESNAR_UPI =
-    "7013025119-9@axl";
-
-const IAESNAR_NAME =
-    "IAESNAR";
-
-
-/* SELECT QUICK AMOUNT */
-
-function selectAmount(amount){
-
-    document.getElementById(
-        "donationAmount"
-    ).value = amount;
-
-    document.getElementById(
-        "donationStatus"
-    ).innerText =
-        "Selected amount: ₹" +
-        amount.toLocaleString("en-IN");
-
-}
-
-
-/* COPY UPI */
-
-function copyUPI(){
-
-    navigator.clipboard.writeText(
-        IAESNAR_UPI
-    ).then(function(){
-
-        document.getElementById(
-            "donationStatus"
-        ).innerText =
-            "UPI ID copied successfully ✅";
-
-    }).catch(function(){
-
-        alert(
-            "UPI ID: " +
-            IAESNAR_UPI
-        );
-
-    });
-
-}
-
-
-/* DONATE */
-
-   
-/* ================= CONTACT ================= */
-
-.contact-card{
-    text-align:center;
-}
-
-.contact-card a{
-    color:var(--blue);
-    font-weight:bold;
-    text-decoration:none;
-    word-break:break-word;
-}
-
-HEADER
-====================================================== -->
+<body>
 
 <header>
+<div class="nav">
 
-<div class="navbar">
-
-<a href="#home" class="brand">
-
-<div class="hero-logo logo-design">
-    🇮🇳
-</div>
-    
-<div class="brand-text">
-<strong>IAESNAR</strong>
-<span>Education • Science • Nature • Responsibility</span>
+<div class="brand">
+<img id="siteLogo" class="logo" alt="IAESNAR Logo">
+<span>INDIAN ASSOCIATION OF EDUCATION,<br>SCIENTIFIC, NATURE AWARENESS<br>AND RESPONSIBILITY</span>
 </div>
 
-</a>
-
-<button class="menu-button"
-        onclick="toggleMenu()"
-        aria-label="Open Menu">
-☰
-</button>
-
-<nav id="mainMenu">
-
+<nav>
 <a href="#home">Home</a>
-<a href="#about">About Us</a>
+<a href="#about">About</a>
 <a href="#programs">Programs</a>
 <a href="#areas">Areas</a>
 <a href="#philosophy">Philosophy</a>
-<a href="#education">Education</a>
-<a href="#science">Science</a>
-<a href="#nature">Nature</a>
-<a href="#responsibility">Responsibility</a>
 <a href="#events">Events</a>
 <a href="#news">News</a>
 <a href="#gallery">Gallery</a>
-<a href="#membership">Membership</a>
 <a href="#donate">Donate</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </div>
-
 </header>
 
 
-<!-- ======================================================
-HOME
-====================================================== -->
-
 <section id="home" class="hero">
-
 <div class="hero-content">
 
-<div class="brand-logo logo-design">
-    🇮🇳
-</div>
-    
-<div class="motto">
-NATURE IS GOD
-</div>
+<div class="badge">🇮🇳 Serving Society & Nature</div>
 
-<h1>IAESNAR</h1>
+<h1>IAESNAR<br><span>Education • Science • Nature</span></h1>
 
-<h2>
-INDIAN ASSOCIATION OF EDUCATION, SCIENTIFIC,
-NATURE AWARENESS AND RESPONSIBILITY
-</h2>
+<p>Indian Association of Education, Scientific, Nature Awareness and Responsibility</p>
 
-<p class="hero-description">
-Working towards education, scientific awareness,
-nature protection and social responsibility.
+<p style="margin-top:15px">
+Over 20 years of service & responsibility towards needy people and country 🇮🇳🏃
 </p>
 
 <div class="hero-buttons">
-
-<a href="#programs" class="btn btn-gold">
-Explore Our Programs
-</a>
-
-<a href="#donate" class="btn btn-white">
-Support Us
-</a>
-
+<a class="btn1" href="#about">Learn More</a>
+<a class="btn2" href="#donate">❤️ Donate</a>
 </div>
 
 </div>
-
 </section>
 
 
-<!-- ======================================================
-ABOUT US
-====================================================== -->
-
-<section id="about" class="about-background">
-
+<section id="about" class="about">
 <div class="container">
 
-<div class="section-label">
-Who We Are
+<div class="title">
+<h2>About Us</h2>
+<div class="line"></div>
 </div>
-
-<h2 class="section-title">
-About Us
-</h2>
 
 <div class="about-box">
-
-<p>
-<strong>
-Over 20 years of service & responsibility towards needy people and country 🇮🇳
-</strong>
+<p id="aboutText">
+Over 20 years of service & responsibility towards needy people and country 🇮🇳🏃
 </p>
-
-<p style="margin-top:15px;">
-IAESNAR is dedicated to promoting education,
-scientific awareness, nature awareness and
-responsibility towards society and the nation.
-</p>
-
 </div>
 
 </div>
-
 </section>
 
 
-<!-- ======================================================
-OUR PROGRAMS
-====================================================== -->
-
-<section id="programs" class="alt">
-
+<section id="programs" class="programs">
 <div class="container">
 
-<div class="section-label">
-What We Do
+<div class="title">
+<h2>Our Programs</h2>
+<div class="line"></div>
 </div>
-
-<h2 class="section-title">
-Our Programs
-</h2>
-
-<p class="section-intro">
-Our programs encourage students to learn,
-participate, think scientifically and develop confidence.
-</p>
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">📝</div>
+<div class="icon">✍️</div>
 <h3>Essay Writing</h3>
-<p>
-Encouraging creativity, knowledge and communication
-through essay writing.
-</p>
+<p>Conducting essay writing activities to encourage creative thinking and awareness.</p>
 </div>
 
 <div class="card">
 <div class="icon">🎤</div>
 <h3>Elocution</h3>
-<p>
-Developing confidence, public speaking and
-communication skills.
-</p>
+<p>Encouraging students to develop communication, confidence and public speaking skills.</p>
 </div>
 
 <div class="card">
 <div class="icon">🔬</div>
 <h3>Science Olympiad Exams</h3>
-<p>
-Promoting scientific curiosity and competitive learning.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🩺</div>
-<h3>NEET Model Exams</h3>
-<p>
-Providing model examination opportunities for
-NEET aspirants.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">📚</div>
-<h3>JEE Model Exams</h3>
-<p>
-Supporting students preparing for JEE through
-model examinations.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-AREAS OF WORK
-====================================================== -->
-
-<section id="areas">
-
-<div class="container">
-
-<div class="section-label">
-Our Focus
-</div>
-
-<h2 class="section-title">
-Areas of Work
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">🎓</div>
-<h3>Education</h3>
-<p>
-Promoting educational awareness and opportunities.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🌱</div>
-<h3>Environment</h3>
-<p>
-Creating awareness about environmental protection
-and natural resources.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🇮🇳</div>
-<h3>Political Awareness</h3>
-<p>
-Encouraging responsible awareness about society
-and the country.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🤝</div>
-<h3>Social Awareness</h3>
-<p>
-Building a more aware, responsible and caring society.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-FOUNDER'S PHILOSOPHY
-====================================================== -->
-
-<section id="philosophy" class="philosophy">
-
-<div class="container">
-
-<div class="section-label"
-     style="color:#D9A514;">
-Our Vision
-</div>
-
-<h2 class="section-title">
-Founder's Philosophy
-</h2>
-
-<div class="quote">
-
-“To improve Scientific Awareness and Responsibility
-towards Nature and the protection of Natural Resources
-of our country.”
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-EDUCATION
-====================================================== -->
-
-<section id="education">
-
-<div class="container">
-
-<div class="section-label">
-Learning
-</div>
-
-<h2 class="section-title">
-Education
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">🎓</div>
-<h3>Educational Awareness</h3>
-<p>
-Supporting educational awareness and opportunities
-for students and communities.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">📖</div>
-<h3>Student Development</h3>
-<p>
-Encouraging students to develop knowledge,
-confidence and skills.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-SCIENTIFIC ACTIVITIES
-====================================================== -->
-
-<section id="science" class="alt">
-
-<div class="container">
-
-<div class="section-label">
-Scientific Thinking
-</div>
-
-<h2 class="section-title">
-Scientific Activities
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">🔬</div>
-<h3>Science Awareness</h3>
-<p>
-Encouraging scientific curiosity and awareness.
-</p>
+<p>Promoting scientific knowledge and curiosity through competitive examinations.</p>
 </div>
 
 <div class="card">
 <div class="icon">🧪</div>
-<h3>Scientific Learning</h3>
-<p>
-Supporting observation, questioning and scientific learning.
-</p>
+<h3>NEET Model Exams</h3>
+<p>Conducting model examinations to help students prepare for NEET.</p>
+</div>
+
+<div class="card">
+<div class="icon">📐</div>
+<h3>JEE Model Exams</h3>
+<p>Providing examination practice and academic support for JEE aspirants.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ======================================================
-NATURE AWARENESS
-====================================================== -->
-
-<section id="nature">
-
+<section id="areas" class="areas">
 <div class="container">
 
-<div class="section-label">
-Protect Our Planet
+<div class="title">
+<h2>Areas of Work</h2>
+<div class="line"></div>
 </div>
 
-<h2 class="section-title">
-Nature Awareness
-</h2>
-
 <div class="cards">
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Education</h3>
+<p>Supporting educational awareness and opportunities for students and communities.</p>
+</div>
 
 <div class="card">
 <div class="icon">🌳</div>
-<h3>Nature Protection</h3>
-<p>
-Promoting responsibility towards nature and
-natural resources.
-</p>
+<h3>Environment</h3>
+<p>Promoting awareness, protection of nature and responsible use of natural resources.</p>
 </div>
-
-<div class="card">
-<div class="icon">🌍</div>
-<h3>Environmental Awareness</h3>
-<p>
-Creating awareness about environmental
-responsibility and conservation.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-SOCIAL RESPONSIBILITY
-====================================================== -->
-
-<section id="responsibility" class="alt">
-
-<div class="container">
-
-<div class="section-label">
-Serve Society
-</div>
-
-<h2 class="section-title">
-Social Responsibility
-</h2>
-
-<div class="cards">
 
 <div class="card">
 <div class="icon">🤝</div>
-<h3>Community Responsibility</h3>
-<p>
-Encouraging responsible participation
-and awareness in society.
+<h3>Political & Social Awareness</h3>
+<p>Encouraging responsible citizenship and social awareness in society.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="philosophy" class="philosophy">
+<div class="container">
+
+<div class="title">
+<h2>Founder's Philosophy</h2>
+<div class="line"></div>
+</div>
+
+<div class="philosophy-box">
+<p id="philosophyText">
+To improve Scientific Awareness and Responsibility towards Nature and protection of Natural Resources of our country.
 </p>
 </div>
 
+</div>
+</section>
+
+
+<section id="events" class="events">
+<div class="container">
+
+<div class="title">
+<h2>Events</h2>
+<div class="line"></div>
+</div>
+
+<div class="cards" id="eventsContainer">
 <div class="card">
-<div class="icon">❤️</div>
-<h3>Service</h3>
-<p>
-Working towards the welfare of needy people
-and the country.
-</p>
+<div class="icon">📅</div>
+<h3>Upcoming Programs</h3>
+<p>Details of upcoming activities will be announced here.</p>
+</div>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- ======================================================
-EVENTS
-====================================================== -->
-
-<section id="events">
-
+<section id="news" class="news">
 <div class="container">
 
-<div class="section-label">
-Stay Involved
+<div class="title">
+<h2>News & Announcements</h2>
+<div class="line"></div>
 </div>
 
-<h2 class="section-title">
-Events
-</h2>
-
-<div class="cards">
-
-<div class="card event-card">
-<h3>Upcoming Events</h3>
-<p>
-Event information will be displayed here.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-NEWS
-====================================================== -->
-
-<section id="news" class="alt">
-
-<div class="container">
-
-<div class="section-label">
-Latest Updates
-</div>
-
-<h2 class="section-title">
-News & Announcements
-</h2>
-
-<div class="cards">
-
+<div class="cards" id="newsContainer">
 <div class="card">
-<h3>IAESNAR Updates</h3>
-<p>
-News and announcements will be published here.
-</p>
+<div class="icon">📰</div>
+<h3>Welcome to IAESNAR</h3>
+<p>Information and announcements will appear here.</p>
+</div>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- ======================================================
-GALLERY
-====================================================== -->
-
-<section id="gallery">
-
+<section id="gallery" class="gallery">
 <div class="container">
 
-<div class="section-label">
-Our Work
+<div class="title">
+<h2>Gallery</h2>
+<div class="line"></div>
+<p>Photos from our activities and programs.</p>
 </div>
 
-<h2 class="section-title">
-Gallery
-</h2>
-
-<p class="section-intro">
-Photos of programs, events, activities and initiatives
-will be displayed here.
-</p>
-
-<div class="gallery">
-
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
-alt="Nature">
+<div id="galleryGrid" class="gallery-grid">
+<div class="gallery-empty">
+No gallery photos added yet.
 </div>
-
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=85"
-alt="Science">
-</div>
-
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85"
-alt="Environment">
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- ======================================================
-MEMBERSHIP
-====================================================== -->
+<!-- ================= DONATION ================= -->
 
-<section id="membership" class="membership">
-
-<div class="container">
-
-<div class="section-label">
-Join Us
-</div>
-
-<h2 class="section-title">
-Membership
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="icon">
-👥
-</div>
-
-<h3>
-Become Part of the Mission
-</h3>
-
-<p>
-Membership information and application details
-can be added here.
-</p>
-
-<a class="btn btn-gold"
-href="mailto:grkrk9@gmail.com?subject=IAESNAR%20Membership%20Enquiry">
-Membership Enquiry
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-DONATION
-====================================================== -->
-
-<<!-- DONATION SECTION -->
-
-<section id="donate" class="donation-section">
-
-<div class="donation-container">
-
-<h2>Donate to IAESNAR ❤️</h2>
-
-<p>
-Your contribution helps support education, scientific awareness,
-nature protection and social responsibility.
-</p>
-
-<h3>Choose Donation Amount</h3>
-
-<div class="donation-buttons">
-
-<button onclick="selectDonation(100)">₹100</button>
-<button onclick="selectDonation(500)">₹500</button>
-<button onclick="selectDonation(1000)">₹1,000</button>
-<button onclick="selectDonation(2000)">₹2,000</button>
-<button onclick="showCustomAmount()">Custom</button>
-
-</div>
-
-<div id="customAmountBox" style="display:none;">
-
-<input
-type="number"
-id="customAmount"
-placeholder="Enter amount ₹"
-min="1">
-
-<button onclick="setCustomAmount()">
-Set Amount
-</button>
-
-</div>
-
-<div id="selectedDonation">
-Selected Donation: ₹100
-</div>
-
-<!-- QR CODE WILL BE ADDED HERE -->
-
-<div class="donation-qr">
-<span>DONATION QR<br>WILL BE ADDED</span>
-</div>
-
-<button
-class="donate-now"
-onclick="donateNow()">
-Donate Now ❤️
-</button>
-
-<p id="donationMessage"></p>
-
-</div>
-
-</section>
-
-
-<style>
-
-.donation-section{
-    padding:80px 20px;
-    text-align:center;
-    color:white;
-
-    background:
-    linear-gradient(
-        rgba(6,43,99,.95),
-        rgba(7,91,36,.95)
-    );
-}
-
-.donation-container{
-    max-width:850px;
-    margin:auto;
-    padding:40px 25px;
-    border-radius:25px;
-    background:rgba(255,255,255,.10);
-}
-
-.donation-container h2{
-    font-size:38px;
-    margin-bottom:15px;
-}
-
-.donation-container h3{
-    margin-top:25px;
-}
-
-.donation-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-    margin:25px 0;
-}
-
-.donation-buttons button{
-    padding:13px 22px;
-    border:2px solid #D9A514;
-    border-radius:30px;
-    background:white;
-    color:#062B63;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.donation-buttons button:hover{
-    background:#D9A514;
-}
-
-#customAmountBox{
-    margin:20px 0;
-}
-
-#customAmount{
-    padding:13px;
-    width:230px;
-    border:2px solid #D9A514;
-    border-radius:10px;
-    font-size:16px;
-}
-
-#customAmountBox button{
-    padding:13px 18px;
-    margin-left:5px;
-    border:0;
-    border-radius:10px;
-    background:#D9A514;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-#selectedDonation{
-    margin:20px;
-    color:#D9A514;
-    font-size:21px;
-    font-weight:bold;
-}
-
-.donation-qr{
-    width:220px;
-    height:220px;
-    background:white;
-    color:#555;
-    margin:25px auto;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-}
-
-.donate-now{
-    padding:14px 30px;
-    border:0;
-    border-radius:30px;
-    background:#D9A514;
-    color:#172000;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-#donationMessage{
-    margin-top:18px;
-    font-weight:bold;
-}
-
-</style>
-
-
-<script>
-
-let donationAmount = 100;
-
-function selectDonation(amount){
-
-    donationAmount = amount;
-
-    document.getElementById("selectedDonation").innerText =
-        "Selected Donation: ₹" +
-        amount.toLocaleString("en-IN");
-
-    document.getElementById("donationMessage").innerText = "";
-
-    document.getElementById("customAmountBox").style.display = "none";
-}
-
-function showCustomAmount(){
-
-    document.getElementById("customAmountBox").style.display = "block";
-
-    document.getElementById("customAmount").focus();
-}
-
-function setCustomAmount(){
-
-    let amount =
-        Number(document.getElementById("customAmount").value);
-
-    if(!amount || amount < 1){
-
-        document.getElementById("donationMessage").innerText =
-            "Please enter a valid amount.";
-
-        return;
-    }
-
-    donationAmount = amount;
-
-    document.getElementById("selectedDonation").innerText =
-        "Selected Donation: ₹" +
-        amount.toLocaleString("en-IN");
-
-    document.getElementById("donationMessage").innerText =
-        "Custom amount selected ❤️";
-}
-
-function donateNow(){
-
-    document.getElementById("donationMessage").innerText =
-        "Selected donation: ₹" +
-        donationAmount.toLocaleString("en-IN") +
-        ". Payment will be connected after adding the official QR/UPI details.";
-
-}
-
-</script>
-        
-<div class="container">
+<section id="donate" class="donation">
 
 <div class="donation-box">
 
-<div class="section-label" style="color:#D9A514;">
-SUPPORT OUR MISSION
-</div>
+<div style="font-size:45px">❤️</div>
 
-<h2 class="section-title">
-Donate to IAESNAR ❤️
-</h2>
+<h2>Support IAESNAR</h2>
 
-<p>
-Your contribution helps us support education, scientific awareness,
-nature protection and social responsibility activities.
+<p style="margin:12px auto 20px;max-width:580px">
+Your contribution helps us support education,
+scientific awareness, environmental protection
+and social responsibility.
 </p>
-
-<h3 style="margin-top:25px;">
-Choose Donation Amount
-</h3>
-
-<div class="donation-amounts">
-
-<button onclick="selectAmount(100)">₹100</button>
-<button onclick="selectAmount(500)">₹500</button>
-<button onclick="selectAmount(1000)">₹1,000</button>
-<button onclick="selectAmount(2000)">₹2,000</button>
-<button onclick="selectCustom()">Custom Amount</button>
-
-</div>
-
-<div id="customAmountBox" style="display:none;margin-top:20px;">
-
-<input
-type="number"
-id="customAmount"
-placeholder="Enter amount in ₹"
-min="1"
-style="
-width:100%;
-max-width:350px;
-padding:13px;
-border-radius:10px;
-border:none;
-font-size:16px;
-">
-
-</div>
-
-<div id="selectedAmount"
-style="
-margin-top:20px;
-font-size:1.2rem;
-font-weight:bold;
-color:#D9A514;
-">
-Selected Donation: ₹100
-</div>
 
 <div class="qr-box">
 
-<span>
-DONATION QR<br>
-WILL BE ADDED
-</span>
-<!-- DONATION QR -->
+<img
+id="donationQR"
+class="qr"
+alt="IAESNAR Donation QR"
+style="display:none">
 
-<div class="donation-qr-box">
-
-    <h3>💰 Support IAESNAR</h3>
-
-    <p>
-        Scan the QR code below to make a donation.
-    </p>
-
-    <div class="qr-container">
-        <img
-            src="donation-qr.png"
-            alt="IAESNAR Donation QR Code">
-    </div>
-
-    <p class="upi-text">
-        <strong>UPI ID:</strong><br>
-        7013025119-9@axl
-    </p>
-
-    <div class="donation-buttons">
-
-        <button onclick="openUPI(100)">Donate ₹100</button>
-
-        <button onclick="openUPI(500)">Donate ₹500</button>
-
-        <button onclick="openUPI(1000)">Donate ₹1,000</button>
-
-        <button onclick="openUPI(2000)">Donate ₹2,000</button>
-
-    </div>
-
-    <div class="custom-donation">
-
-        <input
-            type="number"
-            id="customAmount"
-            placeholder="Custom amount ₹"
-            min="1">
-
-        <button onclick="openCustomUPI()">
-            Donate Custom Amount
-        </button>
-
-    </div>
+<div id="qrMissing" class="qr-missing">
+Donation QR will be added by Admin.
+</div>
 
 </div>
 
+<p style="color:#075b24;font-weight:bold">
+📱 Scan the QR code using any UPI app
+</p>
 
-<style>
+<div class="upi">
 
-.donation-qr-box{
-    max-width:650px;
-    margin:30px auto;
-    padding:35px 20px;
-    text-align:center;
-    border-radius:25px;
-    background:white;
-    box-shadow:0 8px 30px rgba(0,0,0,.12);
-}
+<small>UPI ID</small>
 
-.qr-container{
-    width:240px;
-    height:240px;
-    margin:25px auto;
-    padding:10px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.15);
-}
+<strong id="upiId">
+7013025119-9@axl
+</strong>
 
-.qr-container img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
+<button class="copy" onclick="copyUPI()">
+📋 Copy UPI ID
+</button>
 
-.upi-text{
-    margin:15px;
-    color:#062b63;
-}
-
-.donation-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    margin:20px 0;
-}
-
-.donation-buttons button,
-.custom-donation button{
-    padding:12px 18px;
-    border:0;
-    border-radius:25px;
-    background:#d9a514;
-    color:#172000;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.custom-donation{
-    margin-top:15px;
-}
-
-.custom-donation input{
-    padding:12px;
-    width:180px;
-    border:1px solid #ccc;
-    border-radius:10px;
-}
-
-    const url =
-        "upi://pay" +
-        "?pa=" + encodeURIComp
-
-<!-- ======================================================
-CONTACT
-====================================================== -->
-
-<section id="contact" class="alt">
-
-<div class="container">
-
-<div class="section-label">
-Reach Us
 </div>
 
-<h2 class="section-title">
-Contact
-</h2>
-
-<div class="cards">
-
-<div class="card contact-card">
-
-<div class="icon">
-📞
-</div>
-
-<h3>
-Phone
+<h3 style="color:#062b63;margin-top:25px">
+Choose Donation Amount
 </h3>
 
-<a href="tel:9704186759">
-9704186759
-</a>
+<div class="amounts">
+
+<button onclick="selectAmount(100)">₹100</button>
+<button onclick="selectAmount(200)">₹200</button>
+<button onclick="selectAmount(500)">₹500</button>
+<button onclick="selectAmount(1000)">₹1,000</button>
+<button onclick="selectAmount(2000)">₹2,000</button>
 
 </div>
 
-<div class="card contact-card">
+<label>
+Or enter your own amount
+</label>
 
-<div class="icon">
-✉️
+<div class="amount-input">
+<span>₹</span>
+<input
+id="donationAmount"
+type="number"
+min="1"
+step="1"
+placeholder="Enter amount">
 </div>
 
-<h3>
-Email
-</h3>
+<button class="donate-btn" onclick="makeDonation()">
+❤️ Donate Now
+</button>
 
-<a href="mailto:grkrk9@gmail.com">
-grkrk9@gmail.com
-</a>
+<p id="status"></p>
 
-</div>
-
-</div>
+<p style="font-size:13px;color:#777;margin-top:15px">
+The Donate button opens a UPI payment app on supported devices.
+</p>
 
 </div>
-
 </section>
 
 
-<!-- ======================================================
-FOOTER
-====================================================== -->
+<section id="contact" class="contact">
+<div class="container">
+
+<div class="title">
+<h2>Contact Us</h2>
+<div class="line"></div>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>📞 Phone</h3>
+<a href="tel:9704186759">9704186759</a>
+</div>
+
+<div class="contact-card">
+<h3>📧 Email</h3>
+<a href="mailto:grkrk9@gmail.com">grkrk9@gmail.com</a>
+</div>
+
+</div>
+</div>
+</section>
+
 
 <footer>
 
-<h2>
-IAESNAR
-</h2>
+<p><strong>IAESNAR</strong></p>
 
 <p>
-INDIAN ASSOCIATION OF EDUCATION, SCIENTIFIC,
-NATURE AWARENESS AND RESPONSIBILITY
+Indian Association of Education, Scientific,
+Nature Awareness and Responsibility
 </p>
 
-<p>
-Education • Science • Nature • Responsibility
-</p>
+<p>Over 20 years of service & responsibility towards needy people and country 🇮🇳</p>
 
-<p>
-<strong>“Nature is God”</strong>
-</p>
-
-<p style="margin-top:20px;font-size:.85rem;">
+<p style="margin-top:15px;font-size:13px">
 © 2026 IAESNAR. All Rights Reserved.
 </p>
 
@@ -2126,27 +460,155 @@ Education • Science • Nature • Responsibility
 
 <script>
 
-function toggleMenu(){
+/* ================= DEFAULT LOGO ================= */
 
-    document
-    .getElementById("mainMenu")
-    .classList.toggle("open");
+const savedLogo = localStorage.getItem("iaesnar_logo");
+
+if(savedLogo){
+
+    document.getElementById("siteLogo").src = savedLogo;
+
+}else{
+
+    document.getElementById("siteLogo").style.display = "none";
 
 }
 
-document
-.querySelectorAll("#mainMenu a")
-.forEach(function(link){
 
-    link.addEventListener("click",function(){
+/* ================= DONATION QR ================= */
 
-        document
-        .getElementById("mainMenu")
-        .classList.remove("open");
+const savedQR = localStorage.getItem("iaesnar_qr");
+
+if(savedQR){
+
+    document.getElementById("donationQR").src = savedQR;
+    document.getElementById("donationQR").style.display = "block";
+    document.getElementById("qrMissing").style.display = "none";
+
+}
+
+
+/* ================= UPI ================= */
+
+let UPI_ID =
+localStorage.getItem("iaesnar_upi") ||
+"7013025119-9@axl";
+
+document.getElementById("upiId").textContent = UPI_ID;
+
+
+/* ================= COPY UPI ================= */
+
+function copyUPI(){
+
+    navigator.clipboard.writeText(UPI_ID)
+    .then(function(){
+
+        document.getElementById("status").textContent =
+        "UPI ID copied successfully ✅";
+
+    })
+    .catch(function(){
+
+        alert("UPI ID: " + UPI_ID);
 
     });
 
-});
+}
+
+
+/* ================= QUICK AMOUNT ================= */
+
+function selectAmount(amount){
+
+    document.getElementById("donationAmount").value = amount;
+
+    document.getElementById("status").textContent =
+    "Selected amount: ₹" +
+    amount.toLocaleString("en-IN");
+
+}
+
+
+/* ================= DONATE ================= */
+
+function makeDonation(){
+
+    const amount =
+    Number(document.getElementById("donationAmount").value);
+
+    if(!amount || amount <= 0){
+
+        document.getElementById("status").textContent =
+        "Please enter a valid donation amount.";
+
+        return;
+
+    }
+
+    const upiURL =
+    "upi://pay" +
+    "?pa=" + encodeURIComponent(UPI_ID) +
+    "&pn=" + encodeURIComponent("IAESNAR") +
+    "&am=" + encodeURIComponent(amount.toFixed(2)) +
+    "&cu=INR";
+
+    document.getElementById("status").textContent =
+    "Opening UPI payment...";
+
+    window.location.href = upiURL;
+
+}
+
+
+/* ================= LOAD ADMIN DATA ================= */
+
+const savedAbout =
+localStorage.getItem("iaesnar_about");
+
+if(savedAbout){
+    document.getElementById("aboutText").textContent =
+    savedAbout;
+}
+
+
+const savedPhilosophy =
+localStorage.getItem("iaesnar_philosophy");
+
+if(savedPhilosophy){
+    document.getElementById("philosophyText").textContent =
+    savedPhilosophy;
+}
+
+
+/* ================= LOAD GALLERY ================= */
+
+const gallery =
+JSON.parse(
+localStorage.getItem("iaesnar_gallery") || "[]"
+);
+
+const galleryGrid =
+document.getElementById("galleryGrid");
+
+if(gallery.length > 0){
+
+    galleryGrid.innerHTML = "";
+
+    gallery.forEach(function(photo){
+
+        const img =
+        document.createElement("img");
+
+        img.src = photo;
+
+        img.alt = "IAESNAR Gallery";
+
+        galleryGrid.appendChild(img);
+
+    });
+
+}
 
 </script>
 
