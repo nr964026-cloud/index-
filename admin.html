@@ -1498,7 +1498,155 @@ Selected Donation: ₹100
 DONATION QR<br>
 WILL BE ADDED
 </span>
+<!-- DONATION QR -->
 
+<div class="donation-qr-box">
+
+    <h3>💰 Support IAESNAR</h3>
+
+    <p>
+        Scan the QR code below to make a donation.
+    </p>
+
+    <div class="qr-container">
+        <img
+            src="donation-qr.png"
+            alt="IAESNAR Donation QR Code">
+    </div>
+
+    <p class="upi-text">
+        <strong>UPI ID:</strong><br>
+        7013025119-9@axl
+    </p>
+
+    <div class="donation-buttons">
+
+        <button onclick="openUPI(100)">Donate ₹100</button>
+
+        <button onclick="openUPI(500)">Donate ₹500</button>
+
+        <button onclick="openUPI(1000)">Donate ₹1,000</button>
+
+        <button onclick="openUPI(2000)">Donate ₹2,000</button>
+
+    </div>
+
+    <div class="custom-donation">
+
+        <input
+            type="number"
+            id="customAmount"
+            placeholder="Custom amount ₹"
+            min="1">
+
+        <button onclick="openCustomUPI()">
+            Donate Custom Amount
+        </button>
+
+    </div>
+
+</div>
+
+
+<style>
+
+.donation-qr-box{
+    max-width:650px;
+    margin:30px auto;
+    padding:35px 20px;
+    text-align:center;
+    border-radius:25px;
+    background:white;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
+}
+
+.qr-container{
+    width:240px;
+    height:240px;
+    margin:25px auto;
+    padding:10px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.qr-container img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.upi-text{
+    margin:15px;
+    color:#062b63;
+}
+
+.donation-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin:20px 0;
+}
+
+.donation-buttons button,
+.custom-donation button{
+    padding:12px 18px;
+    border:0;
+    border-radius:25px;
+    background:#d9a514;
+    color:#172000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.custom-donation{
+    margin-top:15px;
+}
+
+.custom-donation input{
+    padding:12px;
+    width:180px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+</style>
+
+
+<script>
+
+function openUPI(amount){
+
+    const upiID = "7013025119-9@axl";
+
+    const url =
+        "upi://pay" +
+        "?pa=" + encodeURIComponent(upiID) +
+        "&pn=" + encodeURIComponent("IAESNAR") +
+        "&am=" + amount +
+        "&cu=INR";
+
+    window.location.href = url;
+}
+
+
+function openCustomUPI(){
+
+    const amount =
+        Number(document.getElementById("customAmount").value);
+
+    if(!amount || amount < 1){
+
+        alert("Please enter a valid donation amount.");
+
+        return;
+    }
+
+    openUPI(amount);
+}
+
+</script>
 </div>
 
 <p>
